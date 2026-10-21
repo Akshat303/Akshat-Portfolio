@@ -1,22 +1,92 @@
-# Akshat's Portfolio
+# Hi there, I'm Akshat Srivastava 👋
 
-A responsive, static profile website built with HTML, CSS, and vanilla JavaScript.
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=Akshat303&label=Profile%20Views&color=007396&style=flat-square" alt="Profile Views" />
+  <img src="https://img.shields.io/badge/Focus-Java%20Backend%20Architecture-ED8B00?style=flat-square" alt="Focus" />
+</p>
 
-## Preview
+I am an aspiring **Java Backend Developer** with a solid foundation in **Object-Oriented Programming (OOP)**, **Data Structures & Algorithms (DSA)**, and **Database Management Systems (DBMS)**. I focus on developing scalable, maintainable, and high-performance server-side applications.
 
-Run the folder with a local web server (for example, VS Code Live Server) and open `index.html`. The site reads its content from JSON files using `fetch`, which browsers block when an HTML page is opened directly as `file://`. No build step or package installation is required.
+---
 
-## Personalize before publishing
+### 💻 About Me
 
-- Edit `assets/data/site-content.json` to update editable profile copy, page introductions, navigation/footer labels, contact links and availability message, and the animated headline phrases. Project-specific content remains in `assets/data/projects.json`, skills in `assets/data/tech-stack.json`, badges/certificates in `assets/data/achievements.json`, and work history in `assets/data/experience.json`.
-- Edit `assets/data/experience.json` to add, remove, or update the experience cards on the homepage. Each entry can include `company`, `role`, `employment`, `period`, `duration`, `location`, `description`, and a `skills` array. Company logos are generated from the company initials; no external profile links are required.
-- Edit `assets/data/tech-stack.json` to add, remove, or rename toolkit groups and skills. A skill has `name`, `icon`, and optional `iconClass` fields.
-- Edit `assets/data/projects.json` to add or update projects. Add a project object inside the `projects` array. Projects marked `"type": "project"` use the compact format shown by the older portfolio projects: unique URL-safe `id`, `name`, `category`, `cardType`, `summary`, `description`, `purpose`, `period`, `associatedWith`, optional `organizationLogo`, `tags`, and `technologies`. Project concepts use the full detail format with `features`, `roadmap`, `endpoints`, `learn`, `screens`, and `screenshots`. Each screen has a `title` and `content` HTML string for the mockup carousel. Add screenshot links to that project's `screenshots` array as objects such as `{ "title": "Dashboard", "url": "https://example.com/dashboard.png" }`. Screenshots are added to the same sliding carousel; local image paths are relative to `pages/project-details.html` (for example, `../assets/images/dashboard.png`). Set `"featured": true` on a project to highlight it on the homepage; only mark one project as featured.
-- Edit `assets/data/achievements.json` to add or update badges and certificates. Badges use `name`, `description`, `symbol`, and `style`; certificates use `name`, `shortName`, `url`, and `provider`. Change `profileUrl` to update the HackerRank profile button.
-- Keep JSON syntax valid: separate array entries with commas, use double quotes around keys and text, and do not leave a comma after the final entry. Save the JSON and refresh the page to see the changes.
-- Replace `assets/resume/Akshat-Srivastava-Resume-Placeholder.pdf` with your real resume PDF before sharing the download link.
-- Update the site and page descriptions in `assets/data/site-content.json`.
+- 🔭 **Current Focus:** Deep-diving into **Java Backend Architecture**, RESTful APIs, and Microservices.
+- 💡 **Core Interests:** Algorithmic problem solving, relational schema design, query optimization, and concurrent programming.
+- 📚 **Academic & Tech Pursuits:** Mastering Computer Science fundamentals (DBMS, OS, Discrete Mathematics, and System Design).
+- 🎯 **Goals:** Contributing to enterprise-grade open-source backend projects and crafting fault-tolerant distributed systems.
+- ⚡ **Philosophy:** Clean code, strong design patterns, and writing tests that ensure reliability.
 
-Profile copy and links, the Tech Stack, Projects page and homepage featured project, project detail pages and preview carousels, and Achievements page and homepage counts are rendered from their respective JSON data files. Certificate cards link to the verification URL provided in the achievements data and use decorative local certificate artwork.
+---
 
-The site includes a responsive navigation menu, theme toggle, reduced-motion support, and a small animated headline.
+### 🛠️ Tech Stack & Technical Proficiencies
+
+#### **Core & Backend Development**
+<p align="left">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
+  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot" />
+  <img src="https://img.shields.io/badge/Spring_Framework-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring" />
+  <img src="https://img.shields.io/badge/REST_APIs-02569B?style=for-the-badge&logo=fastapi&logoColor=white" alt="REST APIs" />
+  <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" alt="Hibernate" />
+</p>
+
+#### **Databases & Querying**
+<p align="left">
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Relational_Modeling-333333?style=for-the-badge&logo=databricks&logoColor=white" alt="Data Modeling" />
+</p>
+
+#### **Tools, Environment & Build Systems**
+<p align="left">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" alt="Maven" />
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
+  <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse-ide&logoColor=white" alt="Eclipse" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code" />
+</p>
+
+---
+
+### 📊 GitHub Activity & Insights
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Akshat303&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Akshat's GitHub Stats" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Akshat303&theme=tokyonight&hide_border=true" alt="Akshat's GitHub Streak" width="48%" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Akshat303&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="48%" />
+</p>
+
+---
+
+### 📌 Featured Repositories & Highlights
+
+| Project / Area | Description | Core Stack |
+| :--- | :--- | :--- |
+| **[Java Backend Journey](https://github.com/Akshat303/Java-Backend-Development-Journey-)** | Structured roadmap covering Core Java, Collections, Multithreading, and OOP design patterns. | `Java`, `OOP`, `Clean Code` |
+| **Data Structures & Algorithms** | Optimized solutions to algorithmic challenges focused on optimal time & space complexity. | `Java`, `Algorithms`, `DSA` |
+| **Backend API Services** | Modular server applications implementing relational schemas, clean separation of concerns, and REST best practices. | `Spring Boot`, `SQL`, `JDBC` |
+
+---
+
+### 🤝 Connect With Me
+
+<p align="left">
+  <a href="https://www.linkedin.com/in/akshat303sri/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="mailto:imakshat24@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://github.com/Akshat303">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</p>
+
+---
+<p align="center">
+  <i>"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra</i>
+</p>
