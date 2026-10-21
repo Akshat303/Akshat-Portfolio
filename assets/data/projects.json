@@ -1,0 +1,291 @@
+{
+  "projects": [
+    {
+      "id": "commerce-core",
+      "name": "Commerce Core",
+      "category": "REST API · E-COMMERCE",
+      "cardType": "commerce",
+      "featured": true,
+      "summary": "Design a Spring Boot store API with product, inventory, and order flows backed by PostgreSQL.",
+      "description": "A backend for a small online store: manage a product catalog, keep stock accurate, and let customers place and track orders.",
+      "purpose": "This project shows how a Java service can connect the main parts of a shopping workflow. It is a sample concept, not a completed or deployed application.",
+      "tags": ["Java", "Spring Boot", "PostgreSQL", "Redis"],
+      "features": [
+        "Browse products with search, category filters, and pagination.",
+        "Create orders from available stock and calculate totals on the server.",
+        "Prevent overselling by changing inventory inside a database transaction.",
+        "Track order states such as pending, paid, packed, and shipped."
+      ],
+      "roadmap": [
+        "Create a Spring Boot application and define Product, Inventory, Order, and OrderItem models.",
+        "Add PostgreSQL with Spring Data JPA and write schema constraints and migrations.",
+        "Build validated REST endpoints for catalog, stock, and order workflows.",
+        "Add service-layer transactions, global error responses, and unit/integration tests.",
+        "Add Redis caching for product reads, Docker Compose for local services, and API documentation."
+      ],
+      "endpoints": [
+        { "method": "GET", "path": "/api/products?page=0&size=20", "purpose": "List and filter products" },
+        { "method": "GET", "path": "/api/products/{id}", "purpose": "View product details" },
+        { "method": "POST", "path": "/api/orders", "purpose": "Place an order" },
+        { "method": "GET", "path": "/api/orders/{id}", "purpose": "Track order status" }
+      ],
+      "technologies": ["Java", "Spring Boot", "Spring Data JPA", "PostgreSQL", "Redis", "JUnit"],
+      "learn": "REST API design, relational modeling, transaction boundaries, validation, and cache invalidation.",
+      "screenshots": [],
+      "screens": [
+        { "title": "Dashboard", "content": "<div class=\"preview-summary-grid\"><div><small>MONTHLY REVENUE</small><strong>₹ 2,48,900</strong><span class=\"preview-positive\">↑ 12.8% this month</span></div><div><small>OPEN ORDERS</small><strong>128</strong><span>Across 4 order states</span></div></div><div class=\"preview-section-title\"><b>Recent orders</b><span>View all →</span></div><div class=\"preview-data-row\"><b>#ORD-1048</b><span>Wireless headset</span><strong>₹ 2,499</strong><em>Processing</em></div><div class=\"preview-data-row\"><b>#ORD-1047</b><span>Desk lamp</span><strong>₹ 1,899</strong><em>Shipped</em></div>" },
+        { "title": "Product catalog", "content": "<div class=\"preview-section-title\"><b>Product catalog</b><span>+ Add product</span></div><div class=\"preview-summary-grid\"><div><small>ACTIVE LISTINGS</small><strong>248 products</strong><span>12 categories</span></div><div><small>INVENTORY VALUE</small><strong>₹ 8,42,600</strong><span>Updated just now</span></div></div><div class=\"preview-data-row\"><b>WH-204</b><span>Wireless headset</span><strong>₹ 2,499</strong><em>In stock</em></div><div class=\"preview-data-row\"><b>DL-115</b><span>Desk lamp</span><strong>₹ 1,899</strong><em>In stock</em></div><div class=\"preview-data-row\"><b>TM-088</b><span>Travel mug</span><strong>₹ 799</strong><em>Low stock</em></div>" },
+        { "title": "Order tracking", "content": "<div class=\"preview-section-title\"><b>Order #ORD-1048</b><span>Updated today</span></div><div class=\"preview-pipeline\"><div><i>✓</i><b>Placed</b><small>10:14 AM</small></div><span>→</span><div><i>✓</i><b>Packed</b><small>11:32 AM</small></div><span>→</span><div class=\"preview-stage-current\"><i>●</i><b>Shipped</b><small>In transit</small></div></div><div class=\"preview-deploy-card\"><span class=\"preview-live-dot\"></span><div><b>Order total · ₹ 2,499</b><small>Wireless headset · Qty 1</small></div><strong>TRACK ORDER</strong></div>" }
+      ]
+    },
+    {
+      "id": "event-flow",
+      "name": "EventFlow",
+      "category": "EVENT DRIVEN · KAFKA",
+      "cardType": "events",
+      "summary": "Explore asynchronous order events, retry handling, and independent consumers using Kafka.",
+      "description": "An order-event pipeline where separate services process confirmations, stock updates, and customer notifications asynchronously.",
+      "purpose": "This project demonstrates how producers and consumers communicate through events, so slow background work does not block an order API. It is a sample concept, not a running service.",
+      "tags": ["Java", "Kafka", "Spring Boot", "Docker"],
+      "features": [
+        "Publish an OrderCreated event after an order is accepted.",
+        "Use independent consumers for inventory and email tasks.",
+        "Retry temporary failures and route repeated failures to a dead-letter topic.",
+        "Make event processing idempotent so duplicate messages do not duplicate work."
+      ],
+      "roadmap": [
+        "Start a Spring Boot API and Kafka broker locally with Docker Compose.",
+        "Define versioned event payloads and an order-created topic.",
+        "Publish events only after database commits using an outbox table.",
+        "Build separate consumers with retry policies, dead-letter handling, and idempotency.",
+        "Add integration tests with a test broker and document how to inspect messages."
+      ],
+      "endpoints": [
+        { "method": "POST", "path": "/api/orders", "purpose": "Create an order and publish its event" },
+        { "method": "GET", "path": "/api/orders/{id}", "purpose": "View order processing state" },
+        { "method": "GET", "path": "/actuator/health", "purpose": "Check service health" }
+      ],
+      "technologies": ["Java", "Spring Boot", "Apache Kafka", "Docker", "PostgreSQL", "JUnit"],
+      "learn": "Message-driven architecture, Kafka topics, retries, idempotency, and eventual consistency.",
+      "screenshots": [],
+      "screens": [
+        { "title": "Event pipeline", "content": "<div class=\"preview-flow\"><div><b>ORDER API</b><small>Producer</small></div><span>→</span><div class=\"preview-flow-topic\"><b>Kafka topic</b><small>orders.created</small></div><span>→</span><div><b>WORKERS</b><small>Inventory · Email</small></div></div><div class=\"preview-event-log\"><i></i><span>OrderCreated · ORD-1048</span><b>Processed</b></div><div class=\"preview-event-log\"><i></i><span>OrderCreated · ORD-1047</span><b>Processed</b></div><div class=\"preview-event-log\"><i></i><span>OrderCreated · ORD-1046</span><b>Retrying</b></div>" },
+        { "title": "Consumer health", "content": "<div class=\"preview-section-title\"><b>Consumer groups</b><span>Live status</span></div><div class=\"preview-summary-grid\"><div><small>INVENTORY WORKER</small><strong>Healthy</strong><span>Lag · 0 messages</span></div><div><small>EMAIL WORKER</small><strong>Healthy</strong><span>Lag · 2 messages</span></div></div><div class=\"preview-event-log\"><i></i><span>orders.created · partition 0</span><b>Running</b></div><div class=\"preview-event-log\"><i></i><span>orders.created · partition 1</span><b>Running</b></div>" },
+        { "title": "Retry queue", "content": "<div class=\"preview-section-title\"><b>Failed message review</b><span>Dead-letter queue</span></div><div class=\"preview-summary-grid\"><div><small>RETRY ATTEMPTS</small><strong>03 / 05</strong><span>Exponential backoff</span></div><div><small>MESSAGE STATUS</small><strong class=\"preview-warning\">Waiting</strong><span>Next retry · 30 sec</span></div></div><div class=\"preview-event-log\"><i></i><span>OrderCreated · ORD-1046</span><b>Retrying</b></div><div class=\"preview-event-log\"><i></i><span>Consumer · inventory-worker</span><b>Inspect</b></div>" }
+      ]
+    },
+    {
+      "id": "stockroom",
+      "name": "Stockroom",
+      "category": "DATA & PERSISTENCE · INVENTORY",
+      "cardType": "inventory",
+      "summary": "Build an inventory service with clear CRUD APIs, relational data, validation, and low-stock alerts.",
+      "description": "An inventory management API for products, stock movements, and low-stock warnings.",
+      "purpose": "This is a focused way to practice reliable data modeling and CRUD APIs. Every stock change is recorded so an operator can understand when and why inventory changed.",
+      "tags": ["Java", "Spring Data JPA", "MySQL", "REST API"],
+      "features": [
+        "Create and update products with SKU and category validation.",
+        "Record stock additions, removals, and corrections as auditable movements.",
+        "Reject changes that would leave stock below zero.",
+        "Filter inventory and identify products below their reorder threshold."
+      ],
+      "roadmap": [
+        "Model Product, Category, and StockMovement entities with clear relationships.",
+        "Create a MySQL schema with unique SKU and non-negative quantity constraints.",
+        "Implement DTO-based REST APIs and request validation.",
+        "Use transactions for stock movements and add service and repository tests.",
+        "Add pagination, sorting, OpenAPI docs, and a Docker-based local setup."
+      ],
+      "endpoints": [
+        { "method": "GET", "path": "/api/inventory", "purpose": "Search and page through stock" },
+        { "method": "POST", "path": "/api/products", "purpose": "Create a product" },
+        { "method": "POST", "path": "/api/inventory/{sku}/adjustments", "purpose": "Record a stock change" },
+        { "method": "GET", "path": "/api/inventory/low-stock", "purpose": "List items below reorder level" }
+      ],
+      "technologies": ["Java", "Spring Boot", "Spring Data JPA", "MySQL", "Bean Validation", "JUnit"],
+      "learn": "Relational modeling, validation, transactional updates, audit history, and pagination.",
+      "screenshots": [],
+      "screens": [
+        { "title": "Inventory overview", "content": "<div class=\"preview-summary-grid\"><div><small>ACTIVE PRODUCTS</small><strong>248</strong><span>Across 12 categories</span></div><div><small>LOW STOCK</small><strong class=\"preview-warning\">08 items</strong><span>Reorder needed</span></div></div><div class=\"preview-section-title\"><b>Inventory</b><span>+ Add item</span></div><div class=\"preview-data-row\"><b>WH-204</b><span>Wireless headset</span><strong>128 units</strong><em>In stock</em></div><div class=\"preview-data-row\"><b>DL-115</b><span>Desk lamp</span><strong>06 units</strong><em class=\"preview-status-warning\">Low stock</em></div>" },
+        { "title": "Stock movements", "content": "<div class=\"preview-section-title\"><b>Recent stock movements</b><span>View history →</span></div><div class=\"preview-data-row\"><b>10:42</b><span>Wireless headset</span><strong>+24 units</strong><em>Restock</em></div><div class=\"preview-data-row\"><b>09:18</b><span>Desk lamp</span><strong>-03 units</strong><em>Order</em></div><div class=\"preview-data-row\"><b>Yesterday</b><span>Travel mug</span><strong>+50 units</strong><em>Restock</em></div><div class=\"preview-deploy-card\"><span class=\"preview-live-dot\"></span><div><b>Every stock change is recorded</b><small>Movement history is auditable</small></div></div>" },
+        { "title": "Low stock alerts", "content": "<div class=\"preview-section-title\"><b>Reorder suggestions</b><span>08 products</span></div><div class=\"preview-summary-grid\"><div><small>NEEDS REORDER</small><strong class=\"preview-warning\">08 items</strong><span>Below threshold</span></div><div><small>EST. RESTOCK VALUE</small><strong>₹ 32,450</strong><span>Suggested quantities</span></div></div><div class=\"preview-data-row\"><b>DL-115</b><span>Desk lamp</span><strong>06 left</strong><em class=\"preview-status-warning\">Reorder</em></div><div class=\"preview-data-row\"><b>KB-021</b><span>Keyboards</span><strong>04 left</strong><em class=\"preview-status-warning\">Reorder</em></div>" }
+      ]
+    },
+    {
+      "id": "shipshape",
+      "name": "ShipShape",
+      "category": "CLOUD & CI/CD",
+      "cardType": "pipeline",
+      "summary": "Prototype a repeatable delivery pipeline for a containerized Java service deployed to AWS.",
+      "description": "A repeatable build-and-deploy pipeline for a containerized Spring Boot service running in AWS.",
+      "purpose": "The goal is to make releases predictable: code changes run tests and produce a versioned container before deployment. This is a sample delivery project, not a live cloud deployment.",
+      "tags": ["AWS EC2", "Docker", "GitHub Actions", "CI/CD"],
+      "features": [
+        "Build and test on every pull request.",
+        "Create a small production-ready Docker image.",
+        "Store runtime configuration outside the application image.",
+        "Deploy to an AWS EC2 instance and expose a health check."
+      ],
+      "roadmap": [
+        "Prepare a small Spring Boot API with tests and an Actuator health endpoint.",
+        "Write a multi-stage Dockerfile and run the container locally.",
+        "Add GitHub Actions workflow steps for build, tests, and image creation.",
+        "Configure AWS credentials as repository secrets and provision an EC2 host.",
+        "Deploy the versioned image, verify health, and document rollback and cleanup."
+      ],
+      "endpoints": [
+        { "method": "GET", "path": "/actuator/health", "purpose": "Verify the service is healthy" },
+        { "method": "GET", "path": "/api/version", "purpose": "Confirm the deployed application version" }
+      ],
+      "technologies": ["Java", "Spring Boot", "Docker", "GitHub Actions", "AWS EC2", "AWS RDS"],
+      "learn": "CI/CD pipelines, containerization, cloud configuration, secrets handling, and deployment checks.",
+      "screenshots": [],
+      "screens": [
+        { "title": "Deployment pipeline", "content": "<div class=\"preview-pipeline\"><div><i>✓</i><b>Build</b><small>Tests passed</small></div><span>→</span><div><i>✓</i><b>Test</b><small>42 passing</small></div><span>→</span><div class=\"preview-stage-current\"><i>●</i><b>Deploy</b><small>AWS · staging</small></div></div><div class=\"preview-deploy-card\"><span class=\"preview-live-dot\"></span><div><b>Spring Boot API</b><small>Image · v1.4.2</small></div><strong>HEALTHY</strong></div><div class=\"preview-code-line\"><span>github-actions.yml</span><b>Docker build → deploy</b></div>" },
+        { "title": "Build workflow", "content": "<div class=\"preview-section-title\"><b>Pull request · #42</b><span>main ← feature/orders</span></div><div class=\"preview-pipeline\"><div><i>✓</i><b>Compile</b><small>Java 21</small></div><span>→</span><div><i>✓</i><b>Unit tests</b><small>42 passed</small></div><span>→</span><div class=\"preview-stage-current\"><i>●</i><b>Image</b><small>Building</small></div></div><div class=\"preview-deploy-card\"><span class=\"preview-live-dot\"></span><div><b>Quality checks</b><small>Build · test · container scan</small></div><strong>IN PROGRESS</strong></div>" },
+        { "title": "Service health", "content": "<div class=\"preview-section-title\"><b>Production service</b><span>us-east-1</span></div><div class=\"preview-summary-grid\"><div><small>APPLICATION</small><strong>Healthy</strong><span>Spring Boot · v1.4.2</span></div><div><small>DATABASE</small><strong>Connected</strong><span>AWS RDS · PostgreSQL</span></div></div><div class=\"preview-deploy-card\"><span class=\"preview-live-dot\"></span><div><b>Last deployment</b><small>Today · commit a82f30c</small></div><strong>LIVE</strong></div>" }
+      ]
+    },
+    {
+      "id": "quickcache",
+      "name": "QuickCache",
+      "category": "CACHING",
+      "cardType": "cache",
+      "summary": "Learn cache-aside patterns, expiry, and invalidation for frequently requested catalog data.",
+      "description": "A product-catalog service that speeds up repeated reads with a Redis cache in front of PostgreSQL.",
+      "purpose": "This project makes caching behavior visible: measure repeated reads, set an expiry policy, and keep cached data consistent after an update. It is a sample concept.",
+      "tags": ["Spring Boot", "Redis", "PostgreSQL", "Docker"],
+      "features": [
+        "Cache frequently requested product details by ID.",
+        "Use a time-to-live to limit stale values.",
+        "Evict or refresh cache entries when a product changes.",
+        "Compare response time and database access with caching enabled and disabled."
+      ],
+      "roadmap": [
+        "Build catalog endpoints and persist product data in PostgreSQL.",
+        "Add Redis locally with Docker Compose and configure Spring Cache.",
+        "Cache read operations with a clear key and expiry policy.",
+        "Invalidate cache entries on create, update, and delete operations.",
+        "Add tests for cache hits, expiration, and invalidation; document trade-offs."
+      ],
+      "endpoints": [
+        { "method": "GET", "path": "/api/products/{id}", "purpose": "Read a product, using cache when available" },
+        { "method": "PUT", "path": "/api/products/{id}", "purpose": "Update a product and invalidate its cache" },
+        { "method": "DELETE", "path": "/api/products/{id}", "purpose": "Remove a product and its cache entry" }
+      ],
+      "technologies": ["Java", "Spring Boot", "Spring Cache", "Redis", "PostgreSQL", "Docker"],
+      "learn": "Cache-aside design, TTL, invalidation, performance measurement, and consistency trade-offs.",
+      "screenshots": [],
+      "screens": [
+        { "title": "Cache overview", "content": "<div class=\"preview-cache-request\"><b>GET</b><code>/api/products/204</code><span>200 OK · 8 ms</span></div><div class=\"preview-cache-flow\"><div><small>REQUEST</small><b>API</b></div><span>→</span><div class=\"preview-cache-node\"><small>CACHE HIT</small><b>Redis</b></div><span>↛</span><div class=\"preview-cache-muted\"><small>DATABASE</small><b>PostgreSQL</b></div></div><div class=\"preview-cache-metrics\"><div><small>AVG RESPONSE</small><b>8 ms</b></div><div><small>CACHE HIT RATE</small><b>94.2%</b></div><div><small>TTL</small><b>05:00</b></div></div>" },
+        { "title": "Cache performance", "content": "<div class=\"preview-section-title\"><b>Cache metrics</b><span>Last 24 hours</span></div><div class=\"preview-summary-grid\"><div><small>CACHE HIT RATE</small><strong>94.2%</strong><span>+ 4.8% this week</span></div><div><small>AVG RESPONSE</small><strong>8 ms</strong><span>Was 132 ms uncached</span></div></div><div class=\"preview-cache-metrics\"><div><small>KEYS</small><b>1,284</b></div><div><small>EVICTIONS</small><b>18</b></div><div><small>MEMORY</small><b>42 MB</b></div></div>" },
+        { "title": "Cache invalidation", "content": "<div class=\"preview-section-title\"><b>Product updated</b><span>PUT /api/products/204</span></div><div class=\"preview-cache-flow\"><div><small>UPDATE</small><b>API</b></div><span>→</span><div class=\"preview-cache-node\"><small>INVALIDATED</small><b>Redis key</b></div><span>→</span><div><small>REFRESHED</small><b>Next read</b></div></div><div class=\"preview-deploy-card\"><span class=\"preview-live-dot\"></span><div><b>product:204</b><small>Cache cleared · fresh data on next request</small></div><strong>SYNCED</strong></div>" }
+      ]
+    },
+    {
+      "id": "securegate",
+      "name": "SecureGate",
+      "category": "SECURITY",
+      "cardType": "security",
+      "summary": "Practice secure REST endpoints with authentication, role-based access, and token validation.",
+      "description": "A secured REST API with user sign-in, token-based authentication, and role-based permissions.",
+      "purpose": "This project is for practicing the boundaries between authentication and authorization: identify a user safely, then allow only the actions their role permits. It is a learning concept, not a production security product.",
+      "tags": ["Spring Security", "JWT", "Java", "REST API"],
+      "features": [
+        "Register and authenticate users with password hashes.",
+        "Issue and validate short-lived JWT access tokens.",
+        "Protect endpoints by role and ownership rules.",
+        "Return consistent authorization errors without exposing secrets."
+      ],
+      "roadmap": [
+        "Create User and Role models and store password hashes using a strong encoder.",
+        "Configure Spring Security filter chains and public versus protected routes.",
+        "Implement login and token validation with a maintained JWT library.",
+        "Add role checks, ownership checks, input validation, and security-focused tests.",
+        "Document token expiry and secret configuration; never commit signing secrets."
+      ],
+      "endpoints": [
+        { "method": "POST", "path": "/api/auth/register", "purpose": "Create an account" },
+        { "method": "POST", "path": "/api/auth/login", "purpose": "Authenticate and receive an access token" },
+        { "method": "GET", "path": "/api/profile", "purpose": "Read the authenticated user's profile" },
+        { "method": "GET", "path": "/api/admin/users", "purpose": "Example role-protected admin endpoint" }
+      ],
+      "technologies": ["Java", "Spring Boot", "Spring Security", "JWT", "PostgreSQL", "JUnit"],
+      "learn": "Authentication, authorization, password hashing, token lifecycle, and security testing.",
+      "screenshots": [],
+      "screens": [
+        { "title": "Secure sign in", "content": "<div class=\"preview-login\"><div class=\"preview-login-mark\">A</div><small>SECUREGATE · DEVELOPER PORTAL</small><b>Welcome back</b><span>Sign in to your account</span><div class=\"preview-input\">Email address <strong>akshat@example.com</strong></div><div class=\"preview-input\">Password <strong>••••••••••</strong></div><div class=\"preview-signin\">Sign in securely <span>→</span></div><em><i></i> Protected with JWT authentication</em></div>" },
+        { "title": "Access control", "content": "<div class=\"preview-section-title\"><b>Role permissions</b><span>3 roles</span></div><div class=\"preview-data-row\"><b>ADMIN</b><span>Manage users and roles</span><strong>All access</strong><em>Active</em></div><div class=\"preview-data-row\"><b>EDITOR</b><span>Update own resources</span><strong>Limited</strong><em>Active</em></div><div class=\"preview-data-row\"><b>VIEWER</b><span>Read permitted data</span><strong>Read only</strong><em>Active</em></div><div class=\"preview-deploy-card\"><span class=\"preview-live-dot\"></span><div><b>Authorization policy</b><small>Role and resource ownership checked</small></div></div>" },
+        { "title": "Token status", "content": "<div class=\"preview-section-title\"><b>Active session</b><span>JWT access token</span></div><div class=\"preview-summary-grid\"><div><small>SESSION STATUS</small><strong>Authenticated</strong><span>Subject · akshat@example.com</span></div><div><small>ACCESS SCOPE</small><strong>ROLE_EDITOR</strong><span>Token expires in 14 min</span></div></div><div class=\"preview-deploy-card\"><span class=\"preview-live-dot\"></span><div><b>Token signature</b><small>Verified · issuer and expiry valid</small></div><strong>VALID</strong></div>" }
+      ]
+    },
+    {
+      "id": "tvamev-sahayak",
+      "type": "project",
+      "name": "Tvamev Sahayak",
+      "category": "BACK-END WEB DEVELOPMENT",
+      "cardType": "community",
+      "summary": "A project associated with an organization that encourages people to step forward and help others in need.",
+      "description": "Tvamev Sahayak is an organization that encourages people to take initiative and help someone facing distress or need, rather than waiting for others to act.",
+      "purpose": "This project is associated with Tvamev Sahayak and focuses on back-end web development.",
+      "period": "Aug 2021 – Jan 2022",
+      "associatedWith": "Tvamev Sahayak",
+      "organizationLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQHPSFIXLcSGUA/company-logo_100_100/company-logo_100_100/0/1630642158586?e=1794441600&v=beta&t=h9XseQIEu8emJTQceyYIG1PUp8MCg0lMwOaLr-Jaqnc",
+      "tags": ["Back-End Web Development"],
+      "technologies": ["Back-End Web Development"],
+      "screenshots": [],
+      "screens": []
+    },
+    {
+      "id": "youtube-playlist-downloader",
+      "type": "project",
+      "name": "YouTube Video & Playlist Downloader Application",
+      "category": "PYTHON APPLICATION",
+      "cardType": "download",
+      "summary": "A Python project for downloading YouTube videos and playlists.",
+      "description": "A video and playlist downloader application made with Python.",
+      "purpose": "The project provides a Python-based way to download YouTube videos and playlists.",
+      "period": "Apr 2021 – May 2021",
+      "associatedWith": "Maharaja Ranjit Singh Punjab Technical University",
+      "organizationLogo": "https://media.licdn.com/dms/image/v2/C560BAQFDfg2XQtBBrQ/company-logo_100_100/company-logo_100_100/0/1652113501821?e=1794441600&v=beta&t=zLf-wLyvFhpc2olOEvDO5bqfn0kXGFcDDD-e4tNWGAg",
+      "tags": ["Python", "Video downloader", "Playlist downloader"],
+      "technologies": ["Python"],
+      "screenshots": [],
+      "screens": []
+    },
+    {
+      "id": "awareness-of-waste-recycling",
+      "type": "project",
+      "name": "Awareness of Waste Recycling",
+      "category": "PYTHON · WASTE CLASSIFICATION",
+      "cardType": "recycling",
+      "summary": "A Python project that classifies nine types of waste material to help raise awareness of recycling.",
+      "description": "A Python project focused on classifying nine different waste materials and helping people learn more about waste recycling.",
+      "purpose": "The project uses waste material classification as a way to support awareness of recycling.",
+      "period": "Feb 2021 – Apr 2021",
+      "associatedWith": "Maharaja Ranjit Singh Punjab Technical University",
+      "organizationLogo": "https://media.licdn.com/dms/image/v2/C560BAQFDfg2XQtBBrQ/company-logo_100_100/company-logo_100_100/0/1652113501821?e=1794441600&v=beta&t=zLf-wLyvFhpc2olOEvDO5bqfn0kXGFcDDD-e4tNWGAg",
+      "tags": ["Python", "Waste classification", "Recycling awareness"],
+      "technologies": ["Python"],
+      "screenshots": [],
+      "screens": []
+    },
+    {
+      "id": "automatic-files-distributing-application",
+      "type": "project",
+      "name": "Automatic Files Distributing Application",
+      "category": "PYTHON GUI APPLICATION",
+      "cardType": "files",
+      "summary": "A Python GUI project about organizing and distributing files with a file-manager workflow.",
+      "description": "A Python GUI project exploring file management and automatically organizing files to make everyday file handling easier.",
+      "purpose": "The project focuses on a file-manager-style workflow for distributing files into an organized structure.",
+      "period": "Nov 2019 – Jan 2021",
+      "associatedWith": "Maharaja Ranjit Singh Punjab Technical University",
+      "organizationLogo": "https://media.licdn.com/dms/image/v2/C560BAQFDfg2XQtBBrQ/company-logo_100_100/company-logo_100_100/0/1652113501821?e=1794441600&v=beta&t=zLf-wLyvFhpc2olOEvDO5bqfn0kXGFcDDD-e4tNWGAg",
+      "tags": ["Python", "GUI", "File management"],
+      "technologies": ["Python"],
+      "screenshots": [],
+      "screens": []
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 877 >>
+stream
+q
+0.133 0.157 0.125 rg
+0 640 612 152 re f
+Q
+BT
+/F1 11 Tf
+0.72 0.95 0.42 rg
+48 752 Td
+(AKSHAT SRIVASTAVA) Tj
+/F1 22 Tf
+0.96 0.97 0.94 rg
+0 -37 Td
+(Resume placeholder) Tj
+/F1 10 Tf
+0 -28 Td
+(Replace this file with your real resume before sharing your portfolio.) Tj
+0 -22 Td
+(This PDF is intentionally a placeholder and does not claim work experience.) Tj
+0 -42 Td
+(ROLE) Tj
+/F1 12 Tf
+0.72 0.95 0.42 rg
+0 -18 Td
+(Java Backend Developer) Tj
+/F1 10 Tf
+0.25 0.28 0.23 rg
+0 -42 Td
+(CONTACT) Tj
+0 -18 Td
+(imakshat24@gmail.com) Tj
+0 -16 Td
+(WhatsApp: +91 99148 05645) Tj
+0 -16 Td
+(github.com/akshat303) Tj
+0 -16 Td
+(linkedin.com/in/akshat303sri/) Tj
+0 -43 Td
+(TECHNOLOGY AREAS) Tj
+0 -20 Td
+(Java  |  Spring Boot  |  REST APIs  |  Kafka  |  SQL / NoSQL) Tj
+0 -16 Td
+(AWS  |  Docker  |  Git / GitHub  |  CI/CD) Tj
+0 -50 Td
+(PLACEHOLDER DOCUMENT - Replace with your own resume PDF.) Tj
+ETendstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1238
+%%EOF

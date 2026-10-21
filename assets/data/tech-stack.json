@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "name": "BACKEND & APIs",
+      "skills": [
+        { "name": "Java", "icon": "J", "iconClass": "" },
+        { "name": "Spring Boot", "icon": "✳", "iconClass": "chip-spring" },
+        { "name": "Spring Security", "icon": "◆", "iconClass": "chip-security" },
+        { "name": "REST APIs", "icon": "{ }", "iconClass": "chip-bracket" },
+        { "name": "Kafka", "icon": "≋", "iconClass": "chip-kafka" },
+        { "name": "Microservices", "icon": "</>", "iconClass": "chip-code" }
+      ]
+    },
+    {
+      "name": "DATA & PERSISTENCE",
+      "skills": [
+        { "name": "MySQL", "icon": "▤", "iconClass": "chip-db" },
+        { "name": "PostgreSQL", "icon": "▤", "iconClass": "chip-db" },
+        { "name": "MongoDB", "icon": "◉", "iconClass": "chip-mongo" },
+        { "name": "Redis", "icon": "◆", "iconClass": "chip-redis" },
+        { "name": "Hibernate / JPA", "icon": "↔", "iconClass": "chip-jpa" }
+      ]
+    },
+    {
+      "name": "TOOLS & CLOUD",
+      "skills": [
+        { "name": "AWS (EC2, RDS)", "icon": "☁", "iconClass": "chip-cloud" },
+        { "name": "Docker", "icon": "▣", "iconClass": "chip-docker" },
+        { "name": "Git / GitHub", "icon": "⌘", "iconClass": "chip-git" },
+        { "name": "CI/CD", "icon": "⟳", "iconClass": "chip-ci" },
+        { "name": "Maven", "icon": "M", "iconClass": "chip-maven" },
+        { "name": "JUnit / Mockito", "icon": "✓", "iconClass": "chip-test" }
+        
+      ]
+    }
+  ]
+}

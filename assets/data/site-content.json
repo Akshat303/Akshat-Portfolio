@@ -1,0 +1,176 @@
+{
+  "site": {
+    "name": "Akshat Srivastava",
+    "brand": "Akshat",
+    "role": "Java backend developer",
+    "description": "Akshat Srivastava is a Java backend developer learning Spring Boot and building a strong foundation in backend engineering.",
+    "tagline": "Designed with intention. Built with curiosity.",
+    "homeTitle": "Akshat Srivastava — Java Backend Developer",
+    "projectsTitle": "Projects — Akshat Srivastava",
+    "achievementsTitle": "Badges & Certificates — Akshat Srivastava",
+    "projectTitle": "Project details — Akshat Srivastava",
+    "projectsDescription": "Sample Java backend project concepts for Akshat Srivastava's portfolio.",
+    "achievementsDescription": "HackerRank badges and verified skill certificates earned by Akshat Srivastava.",
+    "projectDetailsDescription": "Project features, development steps, API examples, technologies, and preview screens."
+  },
+  "navigation": {
+    "about": "About",
+    "experience": "Experience",
+    "stack": "Tech stack",
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "contact": "Get in touch"
+  },
+  "hero": {
+    "eyebrow": "BACKEND ENGINEERING / JAVA",
+    "titleLine1": "Building the",
+    "titleLine2": "logic behind",
+    "titleAccent": "great products.",
+    "greeting": "Hey, I’m",
+    "summary": "focused on creating reliable, thoughtful software. Currently learning",
+    "summaryPrefix": "a",
+    "phrases": ["Spring Boot", "backend systems", "better solutions"],
+    "projectsLabel": "Explore my work",
+    "resumeLabel": "View resume",
+    "resumeUrl": "assets/resume/Akshat-Srivastava-Resume-Placeholder.pdf",
+    "note": "Curious by nature. Developer by choice."
+  },
+  "about": {
+    "eyebrow": "GET TO KNOW ME",
+    "title": "Good software starts with",
+    "titleAccent": "good thinking.",
+    "paragraphs": [
+      "I’m a developer building my path in backend engineering. I enjoy understanding how things work under the hood, writing clear code, and turning a tricky problem into a simple solution.",
+      "Right now, I’m deepening my Java skills and exploring Spring Boot — one project, one concept, and one better solution at a time."
+    ],
+    "linkLabel": "See what I’m working on",
+    "principles": [
+      { "label": "01 / CRAFT", "title": "Clarity over cleverness", "description": "Writing code that’s easy to read, reason about, and improve." },
+      { "label": "02 / CURIOSITY", "title": "Always learning", "description": "Staying curious, asking better questions, and growing every day." },
+      { "label": "03 / PURPOSE", "title": "Build with intent", "description": "Keeping the people who use the product at the center of the work." }
+    ]
+  },
+  "stack": {
+    "eyebrow": "MY TOOLKIT",
+    "title": "Tools I’m learning",
+    "titleAccent": "to build with.",
+    "description": "A growing toolkit for building dependable backend applications.",
+    "note": "Always adding something new to the toolkit."
+  },
+  "focus": {
+    "eyebrow": "WHAT I’M FOCUSED ON",
+    "title": "Learning the",
+    "titleLine2": "craft,",
+    "titleAccent": "by building.",
+    "description": "The best way to understand a concept is to put it to work. These are the areas I’m exploring right now.",
+    "items": [
+      { "title": "Backend foundations", "description": "Java, object-oriented design, and writing maintainable code." },
+      { "title": "Building APIs", "description": "Learning how to design, structure, and connect RESTful services." },
+      { "title": "Spring Boot", "description": "Exploring the tools and patterns behind modern Java applications." }
+    ]
+  },
+  "featured": {
+    "label": "FEATURED PROJECT",
+    "concept": "CONCEPT 01 · NOT YET BUILT",
+    "linkLabel": "Explore all project concepts"
+  },
+  "homeAchievements": {
+    "eyebrow": "HACKERRANK",
+    "overline": "LEARN · PRACTICE · PROGRESS",
+    "title": "Practice that",
+    "titleAccent": "adds up.",
+    "description": "Every challenge builds a stronger foundation. Explore my HackerRank milestones.",
+    "linkLabel": "Explore achievements",
+    "accessibleLabel": "View HackerRank badges and certificates",
+    "visualBadges": [
+      { "symbol": "J", "name": "Java", "level": "FOUNDATION", "className": "mini-java" },
+      { "symbol": "▤", "name": "SQL", "level": "ADVANCED", "className": "mini-sql" },
+      { "symbol": "Py", "name": "Python", "level": "CERTIFIED", "className": "mini-python" }
+    ],
+    "badgeCountLabel": "BADGES",
+    "certificateCountLabel": "CERTIFICATES"
+  },
+  "contact": {
+    "eyebrow": "LET’S CONNECT",
+    "prompt": "HAVE A PROJECT IN MIND?",
+    "title": "Let’s make",
+    "titleAccent": "something good.",
+    "description": "I’m always open to a conversation about software, ideas, and opportunities to grow.",
+    "opportunity": "Open to Java Backend opportunities",
+    "emailHref": "mailto:imakshat24@gmail.com",
+    "emailAddress": "imakshat24@gmail.com",
+    "emailAriaLabel": "Email Akshat at imakshat24@gmail.com",
+    "emailLabel": "Email me",
+    "whatsappNumber": "919914805645",
+    "whatsappMessage": "Hi Akshat, I found your portfolio.",
+    "whatsappLabel": "WhatsApp",
+    "githubUrl": "https://github.com/akshat303",
+    "githubLabel": "GitHub",
+    "linkedinUrl": "https://www.linkedin.com/in/akshat303sri/",
+    "linkedinLabel": "LinkedIn",
+    "socialAccessibleLabel": "Social profiles"
+  },
+  "experience": {
+    "eyebrow": "CAREER JOURNEY",
+    "title": "Experience that",
+    "titleAccent": "shaped my craft.",
+    "description": "Roles where I built web experiences, backend services, and practical problem-solving skills.",
+    "durationLabel": "Duration",
+    "skillsLabel": "Skills"
+  },
+  "projectsPage": {
+    "eyebrow": "SELECTED WORK",
+    "projectLabel": "PROJECT",
+    "conceptLabel": "SAMPLE CONCEPT",
+    "title": "Ideas into",
+    "titleAccent": "backend systems.",
+    "description": "A selection of project concepts and earlier projects, with their dates, focus, and associated organizations.",
+    "note": "Entries marked Project describe earlier work; Sample Concept cards are portfolio ideas, not completed builds.",
+    "openLabel": "Explore project details"
+  },
+  "achievementsPage": {
+    "eyebrow": "HACKERRANK PROFILE",
+    "title": "Skills earned.",
+    "titleAccent": "Progress made.",
+    "description": "HackerRank badges and verified skill certificates earned through practice and assessment.",
+    "profileLabel": "View HackerRank profile",
+    "verifiedLabel": "✓ Verified",
+    "badgeCountLabel": "BADGES",
+    "certificateCountLabel": "CERTIFICATES",
+    "badgesEyebrow": "HACKERRANK BADGES",
+    "badgesTitle": "Practice badges",
+    "certificatesEyebrow": "VERIFIED CREDENTIALS",
+    "certificatesTitle": "Skill certificates"
+  },
+  "projectDetails": {
+    "conceptLabel": "PROJECT CONCEPT",
+    "projectLabel": "PROJECT",
+    "associatedLabel": "ASSOCIATED WITH",
+    "overviewLabel": "PROJECT OVERVIEW",
+    "overviewTitle": "About this project",
+    "projectTechnologiesLabel": "TECHNOLOGIES",
+    "sampleLabel": "SAMPLE CONCEPT · NOT YET BUILT",
+    "backLabel": "← Back to all projects",
+    "previewLabel": "CONCEPT SCREEN PREVIEW",
+    "carouselChooseLabel": "Choose a project preview",
+    "carouselPreviousLabel": "Show previous project preview",
+    "carouselNextLabel": "Show next project preview",
+    "imageCaption": "Project screenshot · image URL configured in projects.json",
+    "mockupCaption": "Illustrative mockup · sample concept, not a live application",
+    "ideaLabel": "01 / THE IDEA",
+    "ideaTitle": "What is it for?",
+    "featuresLabel": "02 / WHAT TO BUILD",
+    "featuresTitle": "Core features",
+    "roadmapLabel": "03 / BUILD PLAN",
+    "roadmapTitle": "How to develop it",
+    "endpointsLabel": "04 / API EXAMPLES",
+    "endpointsTitle": "Possible endpoints",
+    "toolsLabel": "05 / SUGGESTED TOOLS",
+    "toolsTitle": "Technology stack",
+    "learnTitle": "What you will learn",
+    "notFoundTitle": "Project not found",
+    "notFoundDescription": "Choose a project from the project list to see its details and development guide.",
+    "browseProjectsLabel": "Browse projects",
+    "imageError": "Could not load this image. Check the URL in projects.json:"
+  }
+}

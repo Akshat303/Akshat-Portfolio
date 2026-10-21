@@ -1,0 +1,32 @@
+{
+  "experiences": [
+    {
+      "company": "Rajat Agrawal Creators",
+      "role": "Back End Developer",
+      "period": "Apr 2023 – Aug 2023",
+      "duration": "5 months",
+      "description": "Collaborated with UX/UI designers and frontend developers to integrate responsive web applications with Java-based backend services. Built and maintained Core Java and Spring Boot functionality, REST API endpoints, business logic, CRUD operations, and MySQL integration. Also supported frontend integration with HTML, CSS, JavaScript, and React, and debugged issues to improve application reliability and performance.",
+      "skills": ["Java", "Spring Boot", "REST APIs", "MySQL", "React.js", "Frontend integration"]
+    },
+    {
+      "company": "Webile Technologies",
+      "role": "Web Developer",
+      "employment": "Full-time",
+      "period": "Sep 2021 – Jul 2023",
+      "duration": "1 year 11 months",
+      "location": "Ahmedabad, Gujarat, India",
+      "description": "Developed web applications and backend services using Java, Spring Boot, REST APIs, and MySQL. Implemented business logic, database integration, and CRUD operations; worked with frontend teammates to connect APIs and deliver responsive interfaces. Also contributed with PHP, JavaScript, and UI work, debugged application issues, and improved reliability and performance.",
+      "skills": ["Java", "Spring Boot", "REST APIs", "MySQL", "PHP", "JavaScript", "UI integration"]
+    },
+    {
+      "company": "Tvamev Sahayak",
+      "role": "Web Development Intern",
+      "employment": "Internship",
+      "period": "Aug 2021 – Nov 2021",
+      "duration": "4 months",
+      "location": "India",
+      "description": "Joined as a web development intern through Internshala, gaining early experience in web development and project planning.",
+      "skills": ["Web development", "JavaScript", "Project planning"]
+    }
+  ]
+}

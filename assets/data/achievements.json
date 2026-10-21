@@ -1,0 +1,22 @@
+{
+  "profileUrl": "https://www.hackerrank.com/profile/sri303akshat",
+  "badges": [
+    { "name": "CPP", "description": "C++ practice", "symbol": "C++", "style": "badge-cpp" },
+    { "name": "Java", "description": "Java practice", "symbol": "J", "style": "badge-java" },
+    { "name": "Python", "description": "Python practice", "symbol": "Py", "style": "badge-python" },
+    { "name": "Days of Code", "description": "Daily coding practice", "symbol": "30", "style": "badge-days" },
+    { "name": "SQL", "description": "SQL practice", "symbol": "SQL", "style": "badge-sql" },
+    { "name": "C language", "description": "C language practice", "symbol": "C", "style": "badge-c" }
+  ],
+  "certificates": [
+    { "name": "Python (Basic)", "shortName": "Py", "url": "https://www.hackerrank.com/certificates/7e492bef41e6", "provider": "HackerRank skill certificate" },
+    { "name": "Problem Solving (Basic)", "shortName": "PS", "url": "https://www.hackerrank.com/certificates/3f50651535bf", "provider": "HackerRank skill certificate" },
+    { "name": "SQL (Basic)", "shortName": "SQL", "url": "https://www.hackerrank.com/certificates/85a62207a0be", "provider": "HackerRank skill certificate" },
+    { "name": "SQL (Intermediate)", "shortName": "SQL", "url": "https://www.hackerrank.com/certificates/ff514522cf45", "provider": "HackerRank skill certificate" },
+    { "name": "JavaScript (Basic)", "shortName": "JS", "url": "https://www.hackerrank.com/certificates/9ab25f7fde0a", "provider": "HackerRank skill certificate" },
+    { "name": "SQL (Advanced)", "shortName": "SQL", "url": "https://www.hackerrank.com/certificates/0e0baf222a74", "provider": "HackerRank skill certificate" },
+    { "name": "Problem Solving (Intermediate)", "shortName": "PS", "url": "https://www.hackerrank.com/certificates/8897e7dfc7bf", "provider": "HackerRank skill certificate" },
+    { "name": "Java (Basic)", "shortName": "J", "url": "https://www.hackerrank.com/certificates/334c4667c249", "provider": "HackerRank skill certificate" },
+    { "name": "React (Basic)", "shortName": "R", "url": "https://www.hackerrank.com/certificates/5a8472ac926d", "provider": "HackerRank skill certificate" }
+  ]
+}
