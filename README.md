@@ -88,5 +88,5 @@ I am an aspiring **Java Backend Developer** with a solid foundation in **Object-
 
 ---
 <p align="center">
-  <i>"Simplicity is prerequisite for reliability." — Edsger W. Dijkstra</i>
+  <i>"Simplicity is prerequisite for reliability." — Akshat Srivastava</i>
 </p>
