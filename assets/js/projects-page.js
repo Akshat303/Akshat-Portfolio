@@ -1,4 +1,17 @@
 const projectGrid = document.querySelector("#project-grid");
+const projectFilters = document.querySelector("#project-filters");
+const projectFilterStatus = document.querySelector("#project-filter-status");
+
+function getProjectCategory(project) {
+  return project.category.split(/[·|]/, 1)[0].trim();
+}
+
+function createFilterOption(label, value) {
+  const option = document.createElement("option");
+  option.textContent = label;
+  option.value = value;
+  return option;
+}
 
 function createProjectArtwork(project, index) {
   const art = document.createElement("div");
@@ -30,6 +43,8 @@ function createProjectCard(project, index, openLabel, labels) {
   card.className = "project-card";
   card.href = `project-details.html?project=${encodeURIComponent(project.id)}`;
   card.setAttribute("aria-label", `View ${project.name} project details`);
+  card.dataset.projectType = project.type === "project" ? "project" : "concept";
+  card.dataset.projectCategory = getProjectCategory(project).toLocaleLowerCase();
 
   const info = document.createElement("div");
   info.className = "project-info";
@@ -83,6 +98,34 @@ if (projectGrid) {
         ...projects.filter((project) => project.type !== "project")
       ];
       projectGrid.replaceChildren(...orderedProjects.map((project, index) => createProjectCard(project, index, site.projectsPage.openLabel, site.projectsPage)));
+      projectFilters.setAttribute("aria-label", site.projectsPage.filtersLabel);
+      const categories = [...new Set(orderedProjects.map((project) => getProjectCategory(project)))]
+        .sort((first, second) => first.localeCompare(second));
+      const filterOptions = [
+        createFilterOption(site.projectsPage.allProjectsLabel, "all"),
+        createFilterOption(site.projectsPage.portfolioProjectsLabel, "project"),
+        createFilterOption(site.projectsPage.sampleConceptsLabel, "concept"),
+        ...categories.map((category) => createFilterOption(category, `category:${category.toLocaleLowerCase()}`))
+      ];
+      projectFilters.replaceChildren(...filterOptions);
+
+      const applyFilter = (filter) => {
+        const visibleCount = [...projectGrid.children].filter((card) => {
+          const matches = filter === "all"
+            || card.dataset.projectType === filter
+            || (filter.startsWith("category:") && card.dataset.projectCategory === filter.slice("category:".length));
+          card.hidden = !matches;
+          return matches;
+        }).length;
+        const resultLabel = visibleCount === 1 ? site.projectsPage.resultLabel : site.projectsPage.resultsLabel;
+        projectFilterStatus.textContent = `${visibleCount} ${resultLabel}`;
+      };
+
+      projectFilters.addEventListener("change", () => applyFilter(projectFilters.value));
+      applyFilter("all");
     })
-    .catch((error) => window.showPortfolioDataError(projectGrid, error));
+    .catch((error) => {
+      window.showPortfolioDataError(projectGrid, error);
+      if (projectFilters) projectFilters.replaceChildren();
+    });
 }

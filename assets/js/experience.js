@@ -54,9 +54,19 @@ if (experienceList) {
           metadata.append(item);
         });
 
-        const description = document.createElement("p");
-        description.className = "experience-description";
-        description.textContent = experience.description;
+        const highlights = document.createElement("ul");
+        highlights.className = "experience-highlights";
+        const highlightsLabel = document.createElement("span");
+        highlightsLabel.className = "experience-highlights-label";
+        highlightsLabel.textContent = content.experience.highlightsLabel;
+        const highlightItems = Array.isArray(experience.highlights) && experience.highlights.length
+          ? experience.highlights
+          : [experience.description];
+        highlightItems.forEach((highlight) => {
+          const item = document.createElement("li");
+          item.textContent = highlight;
+          highlights.append(item);
+        });
 
         const skills = document.createElement("div");
         skills.className = "experience-skills";
@@ -72,7 +82,7 @@ if (experienceList) {
 
         main.append(header);
         if (metadata.childElementCount) main.append(metadata);
-        main.append(description, skills);
+        main.append(highlightsLabel, highlights, skills);
         article.append(marker, companyMark, main);
         return article;
       }));

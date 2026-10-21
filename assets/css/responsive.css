@@ -110,8 +110,11 @@
   .experience-card-heading h3 { font-size: 16px; }
   .experience-period { justify-items: start; text-align: left; }
   .experience-period { gap: 7px; }
-  .experience-description { font-size: 11px; }
+  .experience-highlights { gap: 7px; }
+  .experience-highlights li { font-size: 11px; }
   .experience-skills { gap: 6px; }
+  .project-filter-control { align-items: flex-start; flex-direction: column; gap: 7px; margin-top: -10px; }
+  .project-filter-select { width: 100%; }
   .contact-email-link { font-size: 14px; }
   .contact-decoration span:first-child { left: 0; top: 105px; font-size: 29px; }
   .contact-decoration span:nth-child(2) { right: 1%; top: 128px; font-size: 20px; }

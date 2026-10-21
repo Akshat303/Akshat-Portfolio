@@ -116,12 +116,19 @@
     "titleAccent": "shaped my craft.",
     "description": "Roles where I built web experiences, backend services, and practical problem-solving skills.",
     "durationLabel": "Duration",
-    "skillsLabel": "Skills"
+    "skillsLabel": "Skills",
+    "highlightsLabel": "Highlights"
   },
   "projectsPage": {
     "eyebrow": "SELECTED WORK",
     "projectLabel": "PROJECT",
     "conceptLabel": "SAMPLE CONCEPT",
+    "filtersLabel": "Filter projects",
+    "allProjectsLabel": "All projects",
+    "portfolioProjectsLabel": "My projects",
+    "sampleConceptsLabel": "Sample concepts",
+    "resultLabel": "project shown",
+    "resultsLabel": "projects shown",
     "title": "Ideas into",
     "titleAccent": "backend systems.",
     "description": "A selection of project concepts and earlier projects, with their dates, focus, and associated organizations.",

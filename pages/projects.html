@@ -41,6 +41,11 @@
       <h1><span data-content="projectsPage.title">Ideas into</span><br><span data-content="projectsPage.titleAccent">backend systems.</span></h1>
       <p data-content="projectsPage.description">Sample project concepts for a Java backend portfolio. These are demo ideas, not claims of completed work—replace them with your own builds, repositories, and live demos.</p>
     </section>
+    <div class="project-filter-control">
+      <label class="project-filter-label" for="project-filters" data-content="projectsPage.filtersLabel">Filter projects</label>
+      <select class="project-filter-select" id="project-filters" aria-label="Filter projects"></select>
+    </div>
+    <p class="project-filter-status" id="project-filter-status" aria-live="polite"></p>
     <section class="project-grid" id="project-grid" aria-label="Selected projects and concepts" aria-live="polite"></section>
     <p class="projects-note"><span class="status-dot"></span> <span data-content="projectsPage.note">Entries marked Project describe earlier work; Sample Concept cards are portfolio ideas, not completed builds.</span></p>
   </main>

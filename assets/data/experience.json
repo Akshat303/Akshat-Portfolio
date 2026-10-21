@@ -6,6 +6,11 @@
       "period": "Apr 2023 – Aug 2023",
       "duration": "5 months",
       "description": "Collaborated with UX/UI designers and frontend developers to integrate responsive web applications with Java-based backend services. Built and maintained Core Java and Spring Boot functionality, REST API endpoints, business logic, CRUD operations, and MySQL integration. Also supported frontend integration with HTML, CSS, JavaScript, and React, and debugged issues to improve application reliability and performance.",
+      "highlights": [
+        "Collaborated with UX/UI designers and frontend developers to integrate responsive web applications with Java backend services.",
+        "Built backend functionality and REST API endpoints using Core Java and Spring Boot.",
+        "Implemented business logic, CRUD operations, and MySQL integration; debugged issues to improve reliability."
+      ],
       "skills": ["Java", "Spring Boot", "REST APIs", "MySQL", "React.js", "Frontend integration"]
     },
     {
@@ -16,6 +21,11 @@
       "duration": "1 year 11 months",
       "location": "Ahmedabad, Gujarat, India",
       "description": "Developed web applications and backend services using Java, Spring Boot, REST APIs, and MySQL. Implemented business logic, database integration, and CRUD operations; worked with frontend teammates to connect APIs and deliver responsive interfaces. Also contributed with PHP, JavaScript, and UI work, debugged application issues, and improved reliability and performance.",
+      "highlights": [
+        "Developed web applications and backend services with Java, Spring Boot, REST APIs, and MySQL.",
+        "Implemented business logic, database integration, and CRUD operations.",
+        "Collaborated on frontend integration and debugged issues affecting application reliability."
+      ],
       "skills": ["Java", "Spring Boot", "REST APIs", "MySQL", "PHP", "JavaScript", "UI integration"]
     },
     {
@@ -26,6 +36,10 @@
       "duration": "4 months",
       "location": "India",
       "description": "Joined as a web development intern through Internshala, gaining early experience in web development and project planning.",
+      "highlights": [
+        "Gained practical experience in web development during an internship.",
+        "Developed skills in JavaScript and project planning."
+      ],
       "skills": ["Web development", "JavaScript", "Project planning"]
     }
   ]
