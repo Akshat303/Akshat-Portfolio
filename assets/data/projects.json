@@ -9,6 +9,8 @@
       "description": "A backend for a small online store: manage a product catalog, keep stock accurate, and let customers place and track orders.",
       "purpose": "This project shows how a Java service can connect the main parts of a shopping workflow. It is a sample concept, not a completed or deployed application.",
       "learn": "REST API design, relational modeling, transaction boundaries, validation, and cache invalidation.",
+      "repositoryUrl": "https://example.com/repo/commerce-core",
+      "liveDemoUrl": "https://example.com/demo/commerce-core",
       "type": "concept",
       "featured": true,
       "tags": [
@@ -98,6 +100,8 @@
       "description": "An order-event pipeline where separate services process confirmations, stock updates, and customer notifications asynchronously.",
       "purpose": "This project demonstrates how producers and consumers communicate through events, so slow background work does not block an order API. It is a sample concept, not a running service.",
       "learn": "Message-driven architecture, Kafka topics, retries, idempotency, and eventual consistency.",
+      "repositoryUrl": "https://example.com/repo/event-flow",
+      "liveDemoUrl": "https://example.com/demo/event-flow",
       "type": "concept",
       "featured": false,
       "tags": [
@@ -182,6 +186,8 @@
       "description": "An inventory management API for products, stock movements, and low-stock warnings.",
       "purpose": "This is a focused way to practice reliable data modeling and CRUD APIs. Every stock change is recorded so an operator can understand when and why inventory changed.",
       "learn": "Relational modeling, validation, transactional updates, audit history, and pagination.",
+      "repositoryUrl": "https://example.com/repo/stockroom",
+      "liveDemoUrl": "https://example.com/demo/stockroom",
       "type": "concept",
       "featured": false,
       "tags": [
@@ -271,6 +277,8 @@
       "description": "A repeatable build-and-deploy pipeline for a containerized Spring Boot service running in AWS.",
       "purpose": "The goal is to make releases predictable: code changes run tests and produce a versioned container before deployment. This is a sample delivery project, not a live cloud deployment.",
       "learn": "CI/CD pipelines, containerization, cloud configuration, secrets handling, and deployment checks.",
+      "repositoryUrl": "https://example.com/repo/shipshape",
+      "liveDemoUrl": "https://example.com/demo/shipshape",
       "type": "concept",
       "featured": false,
       "tags": [
@@ -350,6 +358,8 @@
       "description": "A product-catalog service that speeds up repeated reads with a Redis cache in front of PostgreSQL.",
       "purpose": "This project makes caching behavior visible: measure repeated reads, set an expiry policy, and keep cached data consistent after an update. It is a sample concept.",
       "learn": "Cache-aside design, TTL, invalidation, performance measurement, and consistency trade-offs.",
+      "repositoryUrl": "https://example.com/repo/quickcache",
+      "liveDemoUrl": "https://example.com/demo/quickcache",
       "type": "concept",
       "featured": false,
       "tags": [
@@ -434,6 +444,8 @@
       "description": "A secured REST API with user sign-in, token-based authentication, and role-based permissions.",
       "purpose": "This project is for practicing the boundaries between authentication and authorization: identify a user safely, then allow only the actions their role permits. It is a learning concept, not a production security product.",
       "learn": "Authentication, authorization, password hashing, token lifecycle, and security testing.",
+      "repositoryUrl": "https://example.com/repo/securegate",
+      "liveDemoUrl": "https://example.com/demo/securegate",
       "type": "concept",
       "featured": false,
       "tags": [
@@ -525,6 +537,8 @@
       "period": "Aug 2021 – Jan 2022",
       "associatedWith": "Tvamev Sahayak",
       "organizationLogo": "https://media.licdn.com/dms/image/v2/C4E0BAQHPSFIXLcSGUA/company-logo_100_100/company-logo_100_100/0/1630642158586?e=1794441600&v=beta&t=h9XseQIEu8emJTQceyYIG1PUp8MCg0lMwOaLr-Jaqnc",
+      "repositoryUrl": "https://example.com/repo/tvamev-sahayak",
+      "liveDemoUrl": "https://example.com/demo/tvamev-sahayak",
       "type": "project",
       "featured": false,
       "tags": [
@@ -563,6 +577,8 @@
       "period": "Apr 2021 – May 2021",
       "associatedWith": "Maharaja Ranjit Singh Punjab Technical University",
       "organizationLogo": "https://media.licdn.com/dms/image/v2/C560BAQFDfg2XQtBBrQ/company-logo_100_100/company-logo_100_100/0/1652113501821?e=1794441600&v=beta&t=zLf-wLyvFhpc2olOEvDO5bqfn0kXGFcDDD-e4tNWGAg",
+      "repositoryUrl": "https://example.com/repo/youtube-playlist-downloader",
+      "liveDemoUrl": "https://example.com/demo/youtube-playlist-downloader",
       "type": "project",
       "featured": false,
       "tags": [
@@ -603,6 +619,8 @@
       "period": "Feb 2021 – Apr 2021",
       "associatedWith": "Maharaja Ranjit Singh Punjab Technical University",
       "organizationLogo": "https://media.licdn.com/dms/image/v2/C560BAQFDfg2XQtBBrQ/company-logo_100_100/company-logo_100_100/0/1652113501821?e=1794441600&v=beta&t=zLf-wLyvFhpc2olOEvDO5bqfn0kXGFcDDD-e4tNWGAg",
+      "repositoryUrl": "https://example.com/repo/awareness-of-waste-recycling",
+      "liveDemoUrl": "https://example.com/demo/awareness-of-waste-recycling",
       "type": "project",
       "featured": false,
       "tags": [
@@ -643,6 +661,8 @@
       "period": "Nov 2019 – Jan 2021",
       "associatedWith": "Maharaja Ranjit Singh Punjab Technical University",
       "organizationLogo": "https://media.licdn.com/dms/image/v2/C560BAQFDfg2XQtBBrQ/company-logo_100_100/company-logo_100_100/0/1652113501821?e=1794441600&v=beta&t=zLf-wLyvFhpc2olOEvDO5bqfn0kXGFcDDD-e4tNWGAg",
+      "repositoryUrl": "https://example.com/repo/automatic-files-distributing-application",
+      "liveDemoUrl": "https://example.com/demo/automatic-files-distributing-application",
       "type": "project",
       "featured": false,
       "tags": [

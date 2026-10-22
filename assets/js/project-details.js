@@ -14,6 +14,25 @@ function makeList(items, className) {
   return list;
 }
 
+function appendProjectActions(copy, project) {
+  const actions = makeElement("div", "project-detail-actions");
+  if (project.repositoryUrl) {
+    const repository = makeElement("a", "button button-outline", "GitHub repository");
+    repository.href = project.repositoryUrl;
+    repository.target = "_blank";
+    repository.rel = "noopener noreferrer";
+    actions.append(repository);
+  }
+  if (project.liveDemoUrl) {
+    const demo = makeElement("a", "button button-primary", "Live demo");
+    demo.href = project.liveDemoUrl;
+    demo.target = "_blank";
+    demo.rel = "noopener noreferrer";
+    actions.append(demo);
+  }
+  if (actions.childElementCount) copy.append(actions);
+}
+
 function makeProjectPreview(project, copy) {
   const panel = makeElement("section", "project-visual-panel");
   panel.setAttribute("aria-label", `${project.name} project preview`);
@@ -162,22 +181,7 @@ function renderPortfolioProject(project, labels, site) {
   const back = makeElement("a", "project-back-link", labels.backLabel);
   back.href = "projects.html";
   copy.append(back);
-  const actions = makeElement("div", "project-detail-actions");
-  if (project.repositoryUrl) {
-    const repository = makeElement("a", "button button-outline", "GitHub repository");
-    repository.href = project.repositoryUrl;
-    repository.target = "_blank";
-    repository.rel = "noopener noreferrer";
-    actions.append(repository);
-  }
-  if (project.liveDemoUrl) {
-    const demo = makeElement("a", "button button-primary", "Live demo");
-    demo.href = project.liveDemoUrl;
-    demo.target = "_blank";
-    demo.rel = "noopener noreferrer";
-    actions.append(demo);
-  }
-  if (actions.childElementCount) copy.append(actions);
+  appendProjectActions(copy, project);
   hero.append(copy);
   if ((project.screenshots || []).length) {
     hero.append(makeProjectPreview(project, labels));
@@ -223,6 +227,7 @@ function renderProject(project, labels, site) {
   const back = makeElement("a", "project-back-link", labels.backLabel);
   back.href = "projects.html";
   copy.append(back);
+  appendProjectActions(copy, project);
   hero.append(copy, makeProjectPreview(project, labels));
   detailRoot.append(hero);
 
