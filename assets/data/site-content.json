@@ -3,7 +3,7 @@
     "name": "Akshat Srivastava",
     "brand": "Akshat",
     "role": "Java backend developer",
-    "description": "Akshat Srivastava is a Java backend developer learning Spring Boot and building a strong foundation in backend engineering.",
+    "description": "Akshat Srivastava is a Java backend developer with experience building Spring Boot services, REST APIs, and MySQL-backed web applications.",
     "tagline": "Designed with intention. Built with curiosity.",
     "homeTitle": "Akshat Srivastava — Java Backend Developer",
     "projectsTitle": "Projects — Akshat Srivastava",
@@ -27,27 +27,43 @@
     "titleLine2": "logic behind",
     "titleAccent": "great products.",
     "greeting": "Hey, I’m",
-    "summary": "focused on creating reliable, thoughtful software. Currently learning",
+    "summary": "with experience building Java web applications and REST APIs. Currently deepening my Spring Boot skills and learning",
     "summaryPrefix": "a",
-    "phrases": ["Spring Boot", "backend systems", "better solutions"],
     "projectsLabel": "Explore my work",
     "resumeLabel": "View resume",
     "resumeUrl": "assets/resume/Akshat-Srivastava-Resume-Placeholder.pdf",
-    "note": "Curious by nature. Developer by choice."
+    "note": "Curious by nature. Developer by choice.",
+    "phrases": [
+      "Spring Boot",
+      "backend systems",
+      "better solutions"
+    ]
   },
   "about": {
     "eyebrow": "GET TO KNOW ME",
     "title": "Good software starts with",
     "titleAccent": "good thinking.",
-    "paragraphs": [
-      "I’m a developer building my path in backend engineering. I enjoy understanding how things work under the hood, writing clear code, and turning a tricky problem into a simple solution.",
-      "Right now, I’m deepening my Java skills and exploring Spring Boot — one project, one concept, and one better solution at a time."
-    ],
     "linkLabel": "See what I’m working on",
+    "paragraphs": [
+      "I’m a backend-focused developer with experience building Java and Spring Boot services, REST endpoints, and MySQL-backed features. I enjoy turning product requirements into clear APIs and dependable application logic.",
+      "I’ve also worked across frontend integration, PHP, and JavaScript. I’m now focusing on growing as a Java backend developer and am open to relevant opportunities."
+    ],
     "principles": [
-      { "label": "01 / CRAFT", "title": "Clarity over cleverness", "description": "Writing code that’s easy to read, reason about, and improve." },
-      { "label": "02 / CURIOSITY", "title": "Always learning", "description": "Staying curious, asking better questions, and growing every day." },
-      { "label": "03 / PURPOSE", "title": "Build with intent", "description": "Keeping the people who use the product at the center of the work." }
+      {
+        "label": "01 / CRAFT",
+        "title": "Clarity over cleverness",
+        "description": "Writing code that’s easy to read, reason about, and improve."
+      },
+      {
+        "label": "02 / CURIOSITY",
+        "title": "Always learning",
+        "description": "Staying curious, asking better questions, and growing every day."
+      },
+      {
+        "label": "03 / PURPOSE",
+        "title": "Build with intent",
+        "description": "Keeping the people who use the product at the center of the work."
+      }
     ]
   },
   "stack": {
@@ -64,9 +80,18 @@
     "titleAccent": "by building.",
     "description": "The best way to understand a concept is to put it to work. These are the areas I’m exploring right now.",
     "items": [
-      { "title": "Backend foundations", "description": "Java, object-oriented design, and writing maintainable code." },
-      { "title": "Building APIs", "description": "Learning how to design, structure, and connect RESTful services." },
-      { "title": "Spring Boot", "description": "Exploring the tools and patterns behind modern Java applications." }
+      {
+        "title": "Backend foundations",
+        "description": "Java, object-oriented design, and writing maintainable code."
+      },
+      {
+        "title": "Building APIs",
+        "description": "Learning how to design, structure, and connect RESTful services."
+      },
+      {
+        "title": "Spring Boot",
+        "description": "Exploring the tools and patterns behind modern Java applications."
+      }
     ]
   },
   "featured": {
@@ -82,21 +107,36 @@
     "description": "Every challenge builds a stronger foundation. Explore my HackerRank milestones.",
     "linkLabel": "Explore achievements",
     "accessibleLabel": "View HackerRank badges and certificates",
-    "visualBadges": [
-      { "symbol": "J", "name": "Java", "level": "FOUNDATION", "className": "mini-java" },
-      { "symbol": "▤", "name": "SQL", "level": "ADVANCED", "className": "mini-sql" },
-      { "symbol": "Py", "name": "Python", "level": "CERTIFIED", "className": "mini-python" }
-    ],
     "badgeCountLabel": "BADGES",
-    "certificateCountLabel": "CERTIFICATES"
+    "certificateCountLabel": "CERTIFICATES",
+    "visualBadges": [
+      {
+        "symbol": "J",
+        "name": "Java",
+        "level": "FOUNDATION",
+        "className": "mini-java"
+      },
+      {
+        "symbol": "▤",
+        "name": "SQL",
+        "level": "ADVANCED",
+        "className": "mini-sql"
+      },
+      {
+        "symbol": "Py",
+        "name": "Python",
+        "level": "CERTIFIED",
+        "className": "mini-python"
+      }
+    ]
   },
   "contact": {
     "eyebrow": "LET’S CONNECT",
     "prompt": "HAVE A PROJECT IN MIND?",
     "title": "Let’s make",
     "titleAccent": "something good.",
-    "description": "I’m always open to a conversation about software, ideas, and opportunities to grow.",
-    "opportunity": "Open to Java Backend opportunities",
+    "description": "Interested in working together? Email is the best way to reach me; you can also connect on LinkedIn or WhatsApp.",
+    "opportunity": "Open to junior Java backend and backend developer roles",
     "emailHref": "mailto:imakshat24@gmail.com",
     "emailAddress": "imakshat24@gmail.com",
     "emailAriaLabel": "Email Akshat at imakshat24@gmail.com",
@@ -114,7 +154,7 @@
     "eyebrow": "CAREER JOURNEY",
     "title": "Experience that",
     "titleAccent": "shaped my craft.",
-    "description": "Roles where I built web experiences, backend services, and practical problem-solving skills.",
+    "description": "Backend and web development roles spanning Java services, REST APIs, MySQL data, and frontend integration.",
     "durationLabel": "Duration",
     "skillsLabel": "Skills",
     "highlightsLabel": "Highlights"
@@ -158,11 +198,11 @@
     "projectTechnologiesLabel": "TECHNOLOGIES",
     "sampleLabel": "SAMPLE CONCEPT · NOT YET BUILT",
     "backLabel": "← Back to all projects",
-    "previewLabel": "CONCEPT SCREEN PREVIEW",
+    "previewLabel": "PROJECT PREVIEW",
     "carouselChooseLabel": "Choose a project preview",
     "carouselPreviousLabel": "Show previous project preview",
     "carouselNextLabel": "Show next project preview",
-    "imageCaption": "Project screenshot · image URL configured in projects.json",
+    "imageCaption": "Sample placeholder - replace with actual project screenshot",
     "mockupCaption": "Illustrative mockup · sample concept, not a live application",
     "ideaLabel": "01 / THE IDEA",
     "ideaTitle": "What is it for?",

@@ -18,7 +18,7 @@
   .achievement-visual { min-width: 190px; transform: scale(.9); }
   .home-achievement-stats { padding-left: 13px; }
   .project-grid { gap: 14px; }
-  .project-art { height: 185px; }
+  .project-art { height: auto; }
   .project-info { padding: 16px; }
   .project-detail-page { width: min(100% - 52px, 760px); }
   .project-detail-hero { grid-template-columns: 1fr; gap: 25px; padding-top: 62px; }
@@ -138,7 +138,7 @@
   .certificate-info strong { font-size: 11px; }
   .verified-badge { padding: 5px 7px; font-size: 8px; }
   .project-grid { grid-template-columns: 1fr; gap: 13px; padding-bottom: 14px; }
-  .project-art { height: 190px; }
+  .project-art { height: auto; }
   .project-info { padding: 18px; }
   .project-info > p { min-height: 0; }
   .project-detail-page { width: calc(100% - 40px); }

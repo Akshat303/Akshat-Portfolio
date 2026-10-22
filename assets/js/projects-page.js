@@ -31,6 +31,19 @@ function createProjectArtwork(project, index) {
   line.textContent = project.tags.slice(0, 3).join("  ·  ");
   mockup.append(line);
   art.append(mockup);
+  const coverImage = project.screenshots?.find((screenshot) => screenshot.url);
+  if (coverImage) {
+    const image = document.createElement("img");
+    image.className = "project-card-image";
+    image.src = coverImage.url;
+    image.alt = `${project.name} screenshot: ${coverImage.title || "project preview"}`;
+    image.addEventListener("error", () => {
+      image.remove();
+      art.classList.remove("has-image");
+    }, { once: true });
+    art.classList.add("has-image");
+    art.append(image);
+  }
   const number = document.createElement("span");
   number.className = "art-index";
   number.textContent = String(index + 1).padStart(2, "0");

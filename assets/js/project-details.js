@@ -16,7 +16,7 @@ function makeList(items, className) {
 
 function makeProjectPreview(project, copy) {
   const panel = makeElement("section", "project-visual-panel");
-  panel.setAttribute("aria-label", `${project.name} project concept screen preview`);
+  panel.setAttribute("aria-label", `${project.name} project preview`);
   panel.append(makeElement("span", "project-visual-label", copy.previewLabel));
 
   const frame = makeElement("div", "project-screen-frame");
@@ -35,7 +35,7 @@ function makeProjectPreview(project, copy) {
       imageUrl: screenshot.url
     };
   });
-  const slides = [...project.screens, ...screenshotSlides];
+  const slides = [...screenshotSlides, ...project.screens];
   let activeSlide = 0;
 
   const pagination = makeElement("div", "project-carousel-pagination");
@@ -162,7 +162,28 @@ function renderPortfolioProject(project, labels, site) {
   const back = makeElement("a", "project-back-link", labels.backLabel);
   back.href = "projects.html";
   copy.append(back);
-  hero.append(copy, makeOrganizationPanel(project, labels));
+  const actions = makeElement("div", "project-detail-actions");
+  if (project.repositoryUrl) {
+    const repository = makeElement("a", "button button-outline", "GitHub repository");
+    repository.href = project.repositoryUrl;
+    repository.target = "_blank";
+    repository.rel = "noopener noreferrer";
+    actions.append(repository);
+  }
+  if (project.liveDemoUrl) {
+    const demo = makeElement("a", "button button-primary", "Live demo");
+    demo.href = project.liveDemoUrl;
+    demo.target = "_blank";
+    demo.rel = "noopener noreferrer";
+    actions.append(demo);
+  }
+  if (actions.childElementCount) copy.append(actions);
+  hero.append(copy);
+  if ((project.screenshots || []).length) {
+    hero.append(makeProjectPreview(project, labels));
+  } else if (project.associatedWith) {
+    hero.append(makeOrganizationPanel(project, labels));
+  }
   detailRoot.append(hero);
 
   const details = makeElement("div", "project-detail-grid portfolio-project-information");
