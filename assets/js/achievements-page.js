@@ -26,6 +26,10 @@ function createCertificate(certificate) {
   const image = document.createElement("img");
   image.src = "../assets/images/certificate-preview.svg";
   image.alt = "";
+  image.className = certificate.image ? "certificate-image-real" : "certificate-image-placeholder";
+  const fallbackImage = image.src;
+  image.addEventListener("error", () => { image.src = fallbackImage; }, { once: true });
+  if (certificate.image) image.src = certificate.image;
   const shortName = document.createElement("span");
   shortName.textContent = certificate.shortName;
   preview.append(image, shortName);

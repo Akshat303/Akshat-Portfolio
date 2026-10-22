@@ -267,7 +267,7 @@ function makeAchievements(sheets) {
   const settings = records(sheets, "Settings");
   const profileUrl = clean(settings.find((row) => clean(row.Setting) === "HackerRank profile URL")?.["Editable value"]);
   const badges = records(sheets, "Badges").filter((row) => clean(row.Name)).map((row) => ({ name: clean(row.Name), description: clean(row.Description), symbol: clean(row.Symbol), style: clean(row["Style class"]) }));
-  const certificates = records(sheets, "Certificates").filter((row) => clean(row.Name)).map((row) => ({ name: clean(row.Name), shortName: clean(row["Short name"]), url: clean(row["Verification URL"]), provider: clean(row.Provider) }));
+  const certificates = records(sheets, "Certificates").filter((row) => clean(row.Name)).map((row) => ({ name: clean(row.Name), shortName: clean(row["Short name"]), url: clean(row["Verification URL"]), provider: clean(row.Provider), ...(clean(row["Image path"]) ? { image: clean(row["Image path"]) } : {}) }));
   return { profileUrl, badges, certificates };
 }
 
