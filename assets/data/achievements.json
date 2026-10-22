@@ -51,56 +51,56 @@
       "shortName": "PS",
       "url": "https://www.hackerrank.com/certificates/3f50651535bf",
       "provider": "HackerRank skill certificate",
-      "image": "../assets/images/certificates/problem-solving-basic.png"
+      "image": "../assets/images/certificates/problem-solving-basic.svg"
     },
     {
       "name": "SQL (Basic)",
       "shortName": "SQL",
       "url": "https://www.hackerrank.com/certificates/85a62207a0be",
       "provider": "HackerRank skill certificate",
-      "image": "../assets/images/certificates/sql-basic.png"
+      "image": "../assets/images/certificates/sql-basic.svg"
     },
     {
       "name": "SQL (Intermediate)",
       "shortName": "SQL",
       "url": "https://www.hackerrank.com/certificates/ff514522cf45",
       "provider": "HackerRank skill certificate",
-      "image": "../assets/images/certificates/sql-intermediate.png"
+      "image": "../assets/images/certificates/sql-intermediate.svg"
     },
     {
       "name": "JavaScript (Basic)",
       "shortName": "JS",
       "url": "https://www.hackerrank.com/certificates/9ab25f7fde0a",
       "provider": "HackerRank skill certificate",
-      "image": "../assets/images/certificates/javascript-basic.png"
+      "image": "../assets/images/certificates/javascript-basic.svg"
     },
     {
       "name": "SQL (Advanced)",
       "shortName": "SQL",
       "url": "https://www.hackerrank.com/certificates/0e0baf222a74",
       "provider": "HackerRank skill certificate",
-      "image": "../assets/images/certificates/sql-advanced.png"
+      "image": "../assets/images/certificates/sql-advanced.svg"
     },
     {
       "name": "Problem Solving (Intermediate)",
       "shortName": "PS",
       "url": "https://www.hackerrank.com/certificates/8897e7dfc7bf",
       "provider": "HackerRank skill certificate",
-      "image": "../assets/images/certificates/problem-solving-intermediate.png"
+      "image": "../assets/images/certificates/problem-solving-intermediate.svg"
     },
     {
       "name": "Java (Basic)",
       "shortName": "J",
       "url": "https://www.hackerrank.com/certificates/334c4667c249",
       "provider": "HackerRank skill certificate",
-      "image": "../assets/images/certificates/java-basic.png"
+      "image": "../assets/images/certificates/java-basic.svg"
     },
     {
       "name": "React (Basic)",
       "shortName": "R",
       "url": "https://www.hackerrank.com/certificates/5a8472ac926d",
       "provider": "HackerRank skill certificate",
-      "image": "../assets/images/certificates/react-basic.png"
+      "image": "../assets/images/certificates/react-basic.svg"
     }
   ]
 }
